@@ -3,6 +3,8 @@
 
 #include <stdint.h>
 
+typedef unsigned int uint;
+
 // #define __ALIGN 8
 // int RoundUP8 (int num){
 //     return ((num + (__ALIGN - 1)) & ~(__ALIGN));
