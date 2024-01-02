@@ -48,4 +48,4 @@ function ijw = kronecker_generator (SCALE, edgefactor)
   %% Adjust to zero-based labels.
   ijw(1:2,:) = ijw(1:2,:) - 1;
 
-endfunction
+end
