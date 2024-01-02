@@ -116,4 +116,4 @@ $ make autogen
 # make the host execution program and the FPGA bitstream. It takes time :)
 $ make APP=pr all 
 # For execution on real hardware. The path of graph dataset needs to be provided by the user. 
-$ ./host_graph_fpga_pr xclbin_pr/*.xclbin ./dataset/rmat-19-32.txt 3
+$ ./host_graph_fpga_pr xclbin_hw_pr/*.xclbin ./dataset/rmat-19-32.txt 3
