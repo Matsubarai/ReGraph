@@ -7,6 +7,8 @@
 #include <ap_int.h>
 #include "ap_axi_sdata.h"
 
+typedef unsigned int uint;
+
 typedef ap_axiu<64, 0, 0, 0> l_tmp_prop_pkt;
 typedef ap_axiu<512, 0, 0, 0> b_tmp_prop_pkt;
 
