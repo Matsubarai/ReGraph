@@ -77,6 +77,7 @@ int schedulePartitions(partition_container_dt &partition_container){
                 split_range.push_back(last_eid_marker); std::cout << last_eid_marker << "  ";
             }
         }
+        std::cout << std::endl;
         split_range.push_back(partition_container.P[i].edge_array_host.size()/2); //for the first subparition...
         
         for (uint subpi = 0; subpi < split_range.size() -1; subpi ++){
