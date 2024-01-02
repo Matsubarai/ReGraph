@@ -1,8 +1,8 @@
 # ReGraph: Scaling Graph Processing on HBM-enabled FPGAs with Heterogeneous Pipelines
 
+**NOTE: Here is a modified version for xilinx_u280_gen3x16_xdma_1_202211_1 platform.**
 
 [![DOI](https://zenodo.org/badge/516650181.svg)](https://zenodo.org/badge/latestdoi/516650181)
-
 
 ## What's new?
 TBD
@@ -65,8 +65,7 @@ The desired device can be specified by passing argument  ```DEVICES=[the device]
 
 | Argument    |  Devices  |
 |--------------|--------------|
-| ```DEVICES=xilinx_u280_xdma_201920_3``` | Alveo U280|
-| ```DEVICES=xilinx_u50_gen3x16_xdma_201920_3``` | Alveo U50 |
+| ```DEVICES=xilinx_u280_gen3x16_xdma_1_202211_1``` | Alveo U280|
 
 ## Datasets
 The table below shows the details of used graph datasets, including synthetic graphs and real-world large-scale graphs.
@@ -97,9 +96,8 @@ Because the dataset is too large, we only provide the dataset generator. Run the
 #### Prerequisites
 * The gcc-9.4
 * Tools:
-    * Vitis 2020.2
+    * Vitis 2022.2
 * Evaluated platforms from Xilinx:
-    * Alveo U50  Data Center Accelerator Card
     * Alveo U280 Data Center Accelerator Card
 
 
