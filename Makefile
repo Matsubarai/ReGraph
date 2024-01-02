@@ -8,10 +8,7 @@ TARGETS := hw
 APP := pr
 # pass in by app=
 
-DEVICES := xilinx_u280_xdma_201920_3
-# device list:
-#   xilinx_u280_xdma_201920_3
-#   xilinx_u50_gen3x16_xdma_201920_3
+DEVICES := xilinx_u280_gen3x16_xdma_1_202211_1
 
 .PHONY: all clean cleanall exe hwemuprepare
 
