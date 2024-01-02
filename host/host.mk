@@ -79,7 +79,7 @@ CLFLAGS += -I ./acc_udfs
 #CLFLAGS += --xp prop:solution.kernel_compiler_margin=10%
 
 # Kernel linker flags
-#LDCLFLAGS += --kernel_frequency=250 #$(FREQ)
+LDCLFLAGS += --kernel_frequency=250 #$(FREQ)
 LDCLFLAGS += --xp prop:solution.kernel_compiler_margin=10% 
 
 EXECUTABLE = host_graph_fpga_$(APP)
