@@ -30,17 +30,17 @@ extern "C" {
 
 #if HAVE_VERTEX_PROP
 	#pragma HLS INTERFACE m_axi port=vertex_prop offset=slave bundle = gmem1
-	#pragma HLS INTERFACE s_axilite port=vertex_prop  bundle=control
+	#pragma HLS INTERFACE s_axilite port=vertex_prop // bundle=control
 #endif
 
 #if HAVE_APPLY_OUTDEG
 	#pragma HLS INTERFACE m_axi port=outdegree offset=slave bundle = gmem2
-	#pragma HLS INTERFACE s_axilite port=outdegree  bundle=control
+	#pragma HLS INTERFACE s_axilite port=outdegree // bundle=control
 #endif
 
-	#pragma HLS INTERFACE s_axilite port=num_dense_paritions  bundle=control
-	#pragma HLS INTERFACE s_axilite port=num_sparse_paritions  bundle=control
-	#pragma HLS INTERFACE s_axilite port=return  bundle=control
+	#pragma HLS INTERFACE s_axilite port=num_dense_paritions // bundle=control
+	#pragma HLS INTERFACE s_axilite port=num_sparse_paritions // bundle=control
+	#pragma HLS INTERFACE s_axilite port=return // bundle=control
 
 
 #pragma HLS DATAFLOW
