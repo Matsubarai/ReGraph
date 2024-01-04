@@ -364,7 +364,7 @@ int transferPartitions(partition_container_dt &partition_container, acc_descript
 
     for (int i = 0; i < NUM_KERNEL; i++) {
         OCL_CHECK(err,
-                partition_container.dst_tmp_prop_dev[i] = cl::Buffer(acc.context, CL_MEM_WRITE_ONLY | CL_MEM_EXT_PTR_XILINX | CL_MEM_USE_HOST_PTR,
+                partition_container.dst_tmp_prop_dev[i] = cl::Buffer(acc.context, CL_MEM_READ_WRITE | CL_MEM_EXT_PTR_XILINX | CL_MEM_USE_HOST_PTR,
                                                 partition_container.dst_tmp_prop_host.size() * sizeof(uint), &partition_container.dst_tmp_prop_ext_ptr[i], &err));
     }
 
@@ -381,7 +381,7 @@ int transferPartitions(partition_container_dt &partition_container, acc_descript
     partition_container.apply_src_prop_ptr.flags = (30 | XCL_MEM_TOPOLOGY);
 
     OCL_CHECK(err,
-            partition_container.apply_src_prop_dev = cl::Buffer(acc.context, CL_MEM_WRITE_ONLY | CL_MEM_EXT_PTR_XILINX | CL_MEM_USE_HOST_PTR,
+            partition_container.apply_src_prop_dev = cl::Buffer(acc.context, CL_MEM_READ_WRITE | CL_MEM_EXT_PTR_XILINX | CL_MEM_USE_HOST_PTR,
                                                 partition_container.vertex_property.size() * sizeof(uint), &partition_container.apply_src_prop_ptr, &err));
     OCL_CHECK(err,
                 err = acc.q.enqueueMigrateMemObjects({partition_container.apply_src_prop_dev}, 0 /* 0 means from host*/));
